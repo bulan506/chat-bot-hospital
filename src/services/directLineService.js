@@ -2,7 +2,7 @@
 import { DirectLine } from "botframework-directlinejs";
 
 const DIRECT_LINE_SECRET =
-  "4bhs1ujzPnwmCuB8zAX9PReBAwJwr8Ev7sNCuBZbeviIDkuBTQGeJQQJ99BFACGhslBAArohAAABAZBS3lWp.Fua270AAduLSFAEz7tr7Guq9z0KmPqShDFlbiSaWUtzgSsUI6NtaJQQJ99BFACGhslBAArohAAABAZBS2dne";
+  "2fh1GbX8Jmw3ei9uGYsDCvHOJiK3b6X84wzv5foVoiHNBSSaIrNvJQQJ99BFAC5T7U2AArohAAABAZBS15yP.5haTOOQhsHBDXb29QuJEuSKYRX3u1tbmTU6CSlql0JoLArjTfKjgJQQJ99BFACYeBjFAArohAAABAZBS2Gwu";
 
 class DirectLineService {
   constructor() {
