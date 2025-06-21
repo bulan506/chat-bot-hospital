@@ -7,7 +7,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import FloatingChatbot from "@/components/FloatingChatbot";
+import FloatingChatbotEmbed from "@/components/FloatingChatbotEmbed";
 import OpenStreetMap from "../components/OpenStreetMap";
 
 export default function Home() {
@@ -178,7 +178,7 @@ export default function Home() {
       </footer>
 
       {/* Chatbot Flotante (ahora como componente independiente) */}
-      <FloatingChatbot />
+<FloatingChatbotEmbed width={400} height={500} buttonSize={60} src={undefined} />
     </div>
   );
 }
