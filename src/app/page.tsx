@@ -9,21 +9,25 @@ import {
 } from "react-icons/fa";
 import FloatingChatbotEmbed from "@/components/FloatingChatbotEmbed";
 import OpenStreetMap from "../components/OpenStreetMap";
+import Header from "@/components/Header/Header";
 
 export default function Home() {
   return (
     <div className="medical-layout">
+            <Header />
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
           <h1>Tatooine Medical Center</h1>
           <p>Cuidando tu salud con tecnología y calidez humana</p>
-          <button className="hero-button">Conoce nuestros servicios</button>
+          <a href="#services">
+            <button className="hero-button">Conoce nuestros servicios</button>
+          </a>
         </div>
       </section>
 
       {/* Servicios Destacados */}
-      <section className="services">
+<section id="services" className="services">
         <div className="container">
           <h2 className="section-title">Nuestros Servicios</h2>
           <div className="services-grid">
@@ -53,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Información Importante */}
-      <section className="info-section">
+      <section id="info" className="info-section">
         <div className="container">
           <h2 className="section-title">Información para Pacientes</h2>
           <div className="info-grid">
@@ -99,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Ubicación */}
-      <section className="location">
+      <section id="location" className="location">
         <div className="container">
           <h2 className="section-title">Nuestra Ubicación</h2>
           <div className="location-grid">
@@ -133,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <div className="container">
           <div className="footer-grid">
             <div>
@@ -178,7 +182,7 @@ export default function Home() {
       </footer>
 
       {/* Chatbot Flotante (ahora como componente independiente) */}
-<FloatingChatbotEmbed width={400} height={500} buttonSize={60} src={undefined} />
+      <FloatingChatbotEmbed width={400} height={500} buttonSize={60} src={undefined} />
     </div>
   );
 }
