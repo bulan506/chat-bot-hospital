@@ -1,10 +1,9 @@
-"use client"; // si usas Next.js App Router; si no aplica, puedes omitirla
+"use client";
 import React, { useState } from "react";
 import { IoChatbubbleEllipses, IoClose } from "react-icons/io5";
 import PropTypes from "prop-types";
-import styles from "./FloatingChatbotEmbed.module.css"; // crea este archivo
+import styles from "./FloatingChatbotEmbed.module.css";
 
-// URL del iframe quemada:
 const CHATBOT_URL =
   "https://copilotstudio.microsoft.com/environments/Default-e7984cac-2543-4f88-8f97-9524335e6bc4/bots/cr29b_agentedeprueba/webchat?__version__=2";
 
@@ -16,10 +15,8 @@ export default function FloatingChatbotEmbed({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Determina la URL del iframe: prop src o constante
   const iframeSrc = src || CHATBOT_URL;
 
-  // Si no hay URL válida, no renderiza nada
   if (!iframeSrc) {
     console.error(
       "FloatingChatbotEmbed: no se proporcionó URL. Verifica la constante o la prop `src`."
@@ -27,23 +24,19 @@ export default function FloatingChatbotEmbed({
     return null;
   }
 
-  // Asegura dimensiones con px si es número
   const formatDim = (dim) => (typeof dim === "number" ? `${dim}px` : dim);
 
   return (
     <div className={styles.chatbotContainer}>
-      {/* Ventana con iframe */}
       {isOpen && (
         <div
           className={styles.chatbotWindow}
-          // inline style para ancho y alto personalizable
           style={{
             width: formatDim(width),
             height: formatDim(height),
           }}
         >
 
-          {/* Contenedor del iframe */}
           <div className={styles.chatbotBody}>
             <iframe
               src={iframeSrc}
@@ -52,14 +45,12 @@ export default function FloatingChatbotEmbed({
               allowFullScreen
             />
           </div>
-          {/* Opcional: footer de aviso */}
           <div className={styles.chatbotFooter}>
             <small>Asistente virtual – No reemplaza asesoramiento médico profesional</small>
           </div>
         </div>
       )}
 
-      {/* Botón flotante */}
       <button
         className={styles.chatbotButton}
         onClick={() => setIsOpen((o) => !o)}
