@@ -351,7 +351,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-      <FloatingChatbotEmbed width={400} height={500} buttonSize={60} src={undefined} />
+      <FloatingChatbotEmbed  buttonSize={60} src={undefined} />
     </div>
   );
 }
